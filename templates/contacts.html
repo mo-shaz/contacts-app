@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacts App: Contacts</title>
+        <link rel="stylesheet" href="../static/styles/contacts.css">
+    </head>
+
+    <body>
+
+        <a style="margin-top: .5rem;" href="/logout">Logout</a>
+        <h4>Hello, Agent {{ user }}</h4>
+
+        <div class="add-contacts">
+            <h1 style="text-decoration: underline;">Add Contact</h1>
+
+            <form action="/save" method="POST">
+                <label for="name">Name</label>
+                <input type="text"  name="name" required>
+
+                <label for="number">Number</label>
+                <input type="text" name="number" required>
+
+                <label for="Email">Email</label>
+                <input type="email" name="email" required>
+
+                <input class="btn" type="submit" value="save">
+            </form>
+        </div>
+
+        <div class="contacts-container">
+            <h1 style="text-decoration: underline;">Contacts</h1>
+
+            {% if data|length == 0 %}
+
+            <p>No contacts added yet</p>
+
+            {% else %}
+
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td>Number</td>
+                        <td>Email</td>
+                        <td>Action</td>
+                    </tr>
+
+                {% for contact in data %}
+                    <tr>
+                        <td>{{ contact[1] }}</td>
+                        <td>{{ contact[2] }}</td>
+                        <td>{{ contact[3] }}</td>
+                        <td>
+                            <a href="/delete/{{ contact[0] }}" class="delete-btn">delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+                </table>
+
+            {% endif %}
+
+        </div>
+    </body>
+</html>

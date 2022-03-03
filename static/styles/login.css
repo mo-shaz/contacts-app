@@ -1,0 +1,73 @@
+/* FONTS */
+@font-face {
+    font-family: 'Epilogue';
+    src: url(../fonts/Epilogue-Regular.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 97%;
+    height: 90vh;
+    font-family: 'Epilogue';
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: .5rem;
+    padding: .25rem;
+    border: 1px solid black;
+    border-radius: .25rem;
+}
+
+input:focus {
+    outline: 1px solid black;
+}
+
+.login {
+    display: block;
+}
+
+.signup {
+    display: none;
+}
+
+.login-btn {
+    padding: .35rem;
+    width: 100%;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    border: 1px solid teal;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.sign-btn {
+    padding: .35rem;
+    width: 100%;
+    background-color: #00b4d8;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #00b4d8;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: teal;
+}
+
+.sign-btn:hover {
+    background-color: white;
+    color: #00b4d8;
+}

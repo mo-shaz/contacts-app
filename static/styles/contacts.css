@@ -1,0 +1,103 @@
+/* FONTS */
+@font-face {
+    font-family: 'Epilogue';
+    src: url(../fonts/Epilogue-Regular.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: 'Epilogue';
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: .5rem;
+    padding: .25rem;
+    border: 1px solid black;
+    border-radius: .25rem;
+}
+
+input:focus {
+    outline: 1px solid black;
+}
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.add-contacts {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.btn {
+    padding: .35rem;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.delete-btn {
+    padding: .25rem;
+    color: white;
+    font-weight: bold;
+    border: 1px solid tomato;
+    background-color: tomato;
+    border-radius: .25rem;
+    transition: all 200ms;
+    text-decoration: none;
+    font-size: 80%;
+}
+
+.save-btn {
+    height: 30px;
+    width: 60px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid teal;
+    background-color: teal;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.delete-btn:hover {
+    background-color: white;
+    color: tomato;
+}
+
+.save-btn:hover {
+    background-color: white;
+    color: teal;
+}
