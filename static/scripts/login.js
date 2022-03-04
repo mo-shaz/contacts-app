@@ -35,13 +35,20 @@ const checkLength = (element) => {
 
         // Disable the buttons and show warning
         loginButton.disabled = true
+        loginButton.style.cursor = "not-allowed"
+
         signButton.disabled = true
+        signButton.style.cursor = "not-allowed"
+
         window.alert("Password must be atleast 8 letters")
 
     } else {
 
         // Enable those buttons
         loginButton.disabled = false
+        loginButton.style.cursor = "pointer"
+
         signButton.disabled = false
+        signButton.style.cursor = "pointer"
     }
 }
