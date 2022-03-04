@@ -85,8 +85,6 @@ try:
     create_cursor.close()
     create_connection.close()
 
-
-
 except Exception as e:
     app.logger.error("Error creating database")
     app.logger.error(e)
@@ -149,7 +147,7 @@ def index():
     user_id = cursor.fetchone()
 
     # If no user, show error
-    if user_id == []:
+    if user_id == [] or user_id == None:
         cursor.close()
         connection.close()
         return render_template('login.html')
@@ -305,9 +303,9 @@ def save():
         return redirect('/')
 
     # Get the form data
-    name = request.form.get('name') or "NIL"
-    number = request.form.get('number') or "NIL"
-    email = request.form.get('email') or "NIL"
+    name = str(request.form.get('name')).strip() or "NIL"
+    number = str(request.form.get('number')).strip() or "NIL"
+    email = str(request.form.get('email')).strip() or "NIL"
 
     # Get a database connection
     connection = connect_to_db()
